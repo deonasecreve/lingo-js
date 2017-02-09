@@ -1,21 +1,29 @@
 
 function getRandomwords(){
-	var random = words[Math.floor(Math.random()*words.length)];
-    var first = random.charAt(0);
-    //document.getElementById("first").innerHTML = first;
-    console.log(random);
-    console.log(first);
+	var randomword = words[Math.floor(Math.random()*words.length)];
+    console.log(randomword);
+    return randomword;
 }
-getRandomwords();
+
+var word = getRandomwords();
+var word_split = word.split("");
+var count = 1;
 
 
-//function wordCheck(){
-   // var wordInput = document.getElementById("wordInput").value;
-    //console.log(wordInput);
-       // for (i = 0; i < wordInput.length; i++){
-       ///     if(wordInput.charAt(i));
-    //    console.log(wordInput.charAt(i));
-   // }
-//}
-//wordCheck();
+function wordCheck(){
+   var wordInput = document.getElementById("wordInput").value;
+   var letterInput = wordInput.split("");
+    for (i = 0; i < 5; i++){
+        if(letterInput[i] === wordInput[i]){
+            console.log(letterInput[i] + "=" + wordInput[i]);
+        }
+    }
+}
+wordCheck();
 
+function Loading(){
+    var firstLetter = document.getElementsByClassName("row1")[0].children;
+    console.log(word_split[0]);
+firstLetter[0].innerHTML = "<div class='first letter'>" + word_split[0] + "</div";
+}
+Loading()

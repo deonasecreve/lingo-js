@@ -1,0 +1,11 @@
+.row1{
+    border: black-solid 1px;
+    border-collapse: collapse;
+}
+
+.colom{
+    width: 75px;
+    height: 75px;
+    border: black-solid 1px;
+    border-collapse: collapse;
+}
