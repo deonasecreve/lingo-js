@@ -1,18 +1,20 @@
-var word = getRandomwords();
+var word = getRandomWords();
 var word_split = word.split("");
 var count = 1;
+var correctLetter= 1;
 
-function getRandomwords() {
-    var randomword = words[Math.floor(Math.random() * words.length)];
-    console.log(randomword);
-    return randomword;
+function getRandomWords() {
+    var randomWord = words[Math.floor(Math.random() * words.length)];
+    console.log(randomWord);
+    return randomWord;
 }
 
 function wordCheck() {
     if (count == 6 ) {
         alert("stop, de beurten zijn op");
         resetLingo();
-        getRandomwords();
+        getRandomWords();
+        firstLetterLoading();
         return;
     }
     var wordInput = document.getElementById("wordInput").value;
@@ -21,9 +23,20 @@ function wordCheck() {
         console.log(letterInput[i] + "=" + wordInput[i]);
         placeInputLetters(i, letterInput[i]);
     if (word_split[i] === letterInput[i]){
-        document.getElementById("")
-        }
+        document.getElementById(correctLetter).style.background = "red";
     }
+    else if(word_split.includes(letterInput[i])){
+        document.getElementById(correctLetter).style.background = "yellow";
+        }
+    correctLetter++
+    }
+
+setTimeout(function(){ 
+    if(word === wordInput){
+        alert("stop, de beurten zijn op");
+        resetLingo();
+            }
+        }, 1000); 
     count++
 }
 
@@ -31,6 +44,7 @@ function firstLetterLoading() {
     var firstLetter = document.getElementsByClassName("row1")[0].children;
     console.log(word_split[0]);
     firstLetter[0].innerHTML = "<div class='first letter'>" + word_split[0] + "</div";
+    return firstLetterLoading;
 }
 firstLetterLoading();
 
@@ -42,6 +56,9 @@ function placeInputLetters(pos, letter) {
 function resetLingo(){
     for (i = 1; i < 26; i++){
         document.getElementById(i).innerHTML = '';
+        document.getElementById(i).style.background = "white";
+        document.getElementsByClassName("row1")[0].children;
     }
+    count = 1;
 }
 
