@@ -35,7 +35,7 @@ setTimeout(function(){
         console.log(letterInput[i] + "=" + wordInput[i]);
         placeInputLetters(i, letterInput[i]);
         if (word_split[i] === letterInput[i]){
-            document.getElementById(count.toString() + correctLetter).style.background = "red";
+            document.getElementById(count.toString() + correctLetter).style.background = "#861B1B";
         }
         else if(word_split.includes(letterInput[i])){
             document.getElementById(count.toString() + correctLetter).style.background = "yellow";
@@ -59,11 +59,12 @@ function placeInputLetters(pos, letter) {
 }
 
 function resetLingo(){
-    
-    for (i = 11; i < 55; i++){
-        document.getElementById(i).innerHTML = '';
-        document.getElementById(i).style.background = "white";
+    var getTagName = document.getElementsByTagName("TD");
+        for (i = 0; i < getTagName.length; i++){
+            getTagName[i].style.backgroundColor ="#8284B3";
+            getTagName[i].innerHTML = "";
     }
+
     count = 1;
     getRandomWords();
     firstLetterLoading();

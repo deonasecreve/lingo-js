@@ -9,3 +9,16 @@
     border: black-solid 1px;
     border-collapse: collapse;
 }
+
+body{
+    background-color: #353883;
+}
+
+.table{
+    background-color: #8284B3;
+    margin: auto;
+}
+
+input{
+    margin: auto;
+}
