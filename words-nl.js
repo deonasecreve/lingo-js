@@ -3,7 +3,7 @@ var words_6 = [
 	"hengel"
 ];
 var words_7 = [
-	"plezier"
+	"plezier" 
 
 ];
 var words_8 = [
