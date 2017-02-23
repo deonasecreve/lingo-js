@@ -1,4 +1,17 @@
-var words = [
+var words_6 = [
+	"werken",
+	"hengel"
+];
+var words_7 = [
+	"plezier"
+
+];
+var words_8 = [
+	"handdoek",
+	"koolzuur"
+];
+
+var words_5 = [
 	"appel",
 	"aldus",
 	"afwas",
@@ -72,6 +85,7 @@ var words = [
 	"daden",
 	"dader",
 	"dames",
+	"dildo",
 	"diner",
 	"datum",
 	"dozen",
@@ -224,6 +238,7 @@ var words = [
 	"lepel",
 	"links",
 	"laden",
+	"lesbi",
 	"leven",
 	"lezen",
 	"lucht",

@@ -1,24 +1,22 @@
-.row1{
-    border: black-solid 1px;
-    border-collapse: collapse;
-}
-
-.colom{
-    width: 75px;
-    height: 75px;
-    border: black-solid 1px;
-    border-collapse: collapse;
-}
-
 body{
-    background-color: #353883;
+	background-color: #353883;
+	color: white;
+	font-family: calibri;
 }
 
-.table{
-    background-color: #8284B3;
-    margin: auto;
+#lingo-tabel{
+	border: solid black 1px;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 40px;
+	background-color: #3104B4;
+	margin: auto;
 }
 
-input{
-    margin: auto;
+#lingo-tabel tr td{
+	width: 100px;
+	height: 100px;
+	border: solid #F2F2F2 3px;
+    border-radius: 25px;
 }
+
